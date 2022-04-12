@@ -1,0 +1,45 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+    $(document).ready(function(){   
+        var countInput = 1
+
+        
+
+        $('#btn-add').click(function(){
+            var nome = $('input[name="nome"]').val()
+
+            $('input[name="nome"]').val('')//Limpa 
+            var html = '<div class="linha'+countInput+'"><br>'+
+            'Nome : <input disabled type="text" name="nome'+countInput+'" value="'+nome+'"/>'+
+            ' Anexo: <input type="file" name="anexo"/>'+
+            '<input type="button" value="remover" class="btn-remover"id="'+countInput+'"/> '+
+            '</div>'
+            $('.anexo').append(html)
+            countInput = countInput +1
+        }) 
+    })
+
+    $(document).on('click','.btn-remover',function(){
+        var id = this.id
+        $('.linha'+id).remove()
+    })
+
+
+   
+    
+ </script>
+ 
+ <div class="item">
+    Nome : <input type="text" name="nome"/>
+    {{!-- Anexo: <input type="file" name="anexo" /> --}}
+    <input type="button" value="adicionar" id="btn-add"/>
+</div>
+
+<form action="/item/novo" method="post" enctype="multipart/form-data">
+    <div class="anexo">
+        
+    </div>
+    <hr>
+    <input type="submit" value="enviar"/>
+ </form>

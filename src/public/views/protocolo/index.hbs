@@ -1,0 +1,97 @@
+<div class="container">
+    <div class="row mt-2 mb-3">
+        <div class="col-12">
+            <i class="bi bi-envelope"></i> Remetente :
+            <div class="form-check-inline">
+            <input class="form-check-input" type="radio" name="tipoRemetente" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+               Externo
+            </label>
+            </div>
+            <div class="form-check-inline">
+            <input class="form-check-input" type="radio" name="tipoRemetente" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+               Interno
+            </label>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <i class="bi bi-file-arrow-up"></i>
+                </div>
+                <div class="card-body">
+                    <label for="basic-url" class="form-label">Remetente</label>
+                    <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                    </div>
+
+                    <label for="basic-url" class="form-label">Responsável</label>
+                    <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="card" style="">
+                <div class="card-header">
+                    <i class="bi bi-mailbox"></i>
+                </div>
+                <div class="card-body">
+                    <label for="basic-url" class="form-label">Destinatário</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                    </div>
+
+                    <label for="basic-url" class="form-label">Responsável Destinatário</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-12 col-md-6">
+            <div class="input-group mb-3">
+            <input type="text" class="form-control" id="basic-url" placeholder="Nome do item " aria-describedby="basic-addon3">
+            <button class="btn btn-primary"><i class="bi bi-plus"></i> Adicionar</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Nome do Item</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Anexo(s)</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Um nome mais ou menos</td>
+                    <td>Um nome muito grande para teste</td>
+                    <td><input type="file" class="form-control"/></td>
+                    <td><butto class="btn btn-danger">Excluir <i class="bi bi-eraser"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+
+    </div>
+
+    <div class="row mt-2">
+        <div class="col">
+            <button type="button" class="btn btn-success"><i class="bi bi-arrow-repeat"></i> Gerar Protocolo</button>
+        </div>
+    </div>
+
+</div>
