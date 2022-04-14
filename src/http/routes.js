@@ -39,13 +39,18 @@ const routes = async (app)=>{
     })
 
     app.get('/protocolo/lista', async(req, res)=>{
-        res.send(await controleProtocolo.protocoloList())
+      //await controleProtocolo.protocoloList()
+        res.render('protocolo/lista')
     })
 
     app.get('/protocolo/novo',async(req,res)=>{
         // console.log(req.body)
         // const protocoloCadastrado = await controleProtocolo.castrarProtocolo(req)
         res.render('protocolo/index')
+    })
+
+    app.get('/protocolo/detalhe', async(req, res)=>{
+        res.render('protocolo/detalhe')
     })
 
 
