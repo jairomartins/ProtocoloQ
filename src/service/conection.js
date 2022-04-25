@@ -3,7 +3,7 @@
  //configuraçoes de conexao
   const sequelize = new Sequelize('protocoloq','jota','root',{
     dialect:'mysql',
-    host:'localhost',
+    host:'192.168.0.100',
     logging:false
   })
 

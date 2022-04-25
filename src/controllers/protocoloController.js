@@ -9,7 +9,11 @@ exports.castrarProtocolo = async (req,res,next)=>{
 }
 
 exports.protocoloList = async()=>{
-    const listaProtocolos = await Protocolo.findAll({include:Remetente})
+    const listaProtocolos = await Protocolo.findAll({order:[['id','desc']],raw:true,include:Remetente})
+    
+    listaProtocolos.forEach(e => {
+        console.log(e['remetente.nome'])
+    });
     return listaProtocolos
 }
 

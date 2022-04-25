@@ -1,4 +1,5 @@
 <div class="container">
+
 <div class="row">
 
     <div class="col align-text-center"><h1>Lista de Protocolos <i class="bi bi-card-list"></i></h1></div>
@@ -31,9 +32,10 @@
             </tr>
         </thead>
         <tbody>
+             {{#each listaProtocolos}}
             <tr>
-                <th scope="row">1</th>
-                <td>Dep. Financeiro</td>
+                <th scope="row">{{this.id}}</th>
+                <td>{{'remetente.nome'}}</td>
                 <td>Dep. Pessoal</td>
                 <td>
                     <form action="/protocolo/detalhe">
@@ -41,22 +43,7 @@
                     </form>
                 </td>
             </tr>
-            <tr>
-            <th scope="row">1</th>
-            <td>Dep. Financeiro</td>
-            <td>Dep. Pessoal</td>
-            <td><button class="btn btn-info"><i class="bi bi-search"></i> Detalhes</button></td>
-            </tr><tr>
-            <th scope="row">1</th>
-            <td>Dep. Financeiro</td>
-            <td>Dep. Pessoal</td>
-            <td><button class="btn btn-info"><i class="bi bi-search"></i> Detalhes</button></td>
-            </tr><tr>
-            <th scope="row">1</th>
-            <td>Dep. Financeiro</td>
-            <td>Dep. Pessoal</td>
-            <td><button class="btn btn-info"><i class="bi bi-search"></i> Detalhes</button></td>
-            </tr>
+            {{/each}}
         </tbody>
     </table>
     </div>

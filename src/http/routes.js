@@ -39,8 +39,8 @@ const routes = async (app)=>{
     })
 
     app.get('/protocolo/lista', async(req, res)=>{
-      //await controleProtocolo.protocoloList()
-        res.render('protocolo/lista')
+        const listaProtocolos = await controleProtocolo.protocoloList()
+        res.render('protocolo/lista',{listaProtocolos : listaProtocolos})
     })
 
     app.get('/protocolo/novo',async(req,res)=>{
